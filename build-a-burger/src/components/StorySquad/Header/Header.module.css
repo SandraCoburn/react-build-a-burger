@@ -1,0 +1,36 @@
+.Toolbar {
+  height: 25vh;
+  background: #6ceae6;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.Toolbar img {
+  width: 100%;
+  /* height: 100%; */
+  height: 25%;
+  left: 6px;
+  box-sizing: border-box;
+
+  position: absolute;
+}
+h6 {
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  font-family: Bangers;
+
+  /* line-height: 77px; */
+}
+.Logo {
+  height: 80%;
+}
+@media (max-width: 499px) {
+  .DesktopOnly {
+    display: none;
+  }
+}
