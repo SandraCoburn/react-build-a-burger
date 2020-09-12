@@ -10,6 +10,6 @@
 ### Added reusable Navigation Items
 ### Created a Responsive Sidedrawer
 ### Added a Sidedrawer Toggle Button
-### Added Responsive adjustments for mobil size using media queries
+### Added Responsive adjustments for mobile size using media queries
 ### Added class components to use Component Lifecycle Methods
 
