@@ -6,7 +6,10 @@ import Backdrop from "../Backdrop/Backdrop";
 class Modal extends Component {
   // Turned this component to class component to change the component to re render only when props change
   shouldComponentUpdate(nextProps, nextState) {
-    return nextProps.show !== this.props.show;
+    return (
+      nextProps.show !== this.props.show ||
+      nextProps.children !== this.props.children
+    );
   }
 
   componentWillMount() {
