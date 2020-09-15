@@ -12,4 +12,7 @@
 ### Added a Sidedrawer Toggle Button
 ### Added Responsive adjustments for mobile size using media queries
 ### Added class components to use Component Lifecycle Methods
+### Added a spinner while sending a Request to the database
+### Added a higher order component to handle network errors
+### Added componentWillMount to load interceptors before children components
 
