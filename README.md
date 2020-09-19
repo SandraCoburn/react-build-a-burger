@@ -1,5 +1,5 @@
 # react-build-a-burger
-## App built using React Create App and CSS Modules for styling. Used axios and Firebase Mongo database.
+## App built using React Create App and CSS Modules for styling. Used axios to connect to Firebase Mongo database.
 ### Added Dynamic components
 ### Added Prop Type Validation
 ### Created Higher Order componets to wrap around other components
