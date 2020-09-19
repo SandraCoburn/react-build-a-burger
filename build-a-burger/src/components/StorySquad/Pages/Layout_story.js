@@ -1,5 +1,5 @@
 import React from "react";
-import Aux from "../../../hoc/Aux";
+import Aux from "../../../hoc/Aux/Aux";
 import classes from "../Pages/Layout_story.module.css";
 import Header from "../Header/Header";
 
