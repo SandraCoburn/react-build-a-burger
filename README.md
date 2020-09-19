@@ -15,4 +15,5 @@
 ### Added a spinner while sending a Request to the database
 ### Added a higher order component to handle network errors
 ### Added componentWillMount to load interceptors before children components
+### Added React Router to create routes
 
