@@ -48,44 +48,23 @@ class BurgerBuilder extends Component {
     this.setState({ purchasing: false });
   };
   purchaseContinueHandler = () => {
-    // alert("You continued!");
-    // this.setState({ loading: true });
-    // const order = {
-    //   ingredients: this.state.ingredients,
-    //   price: this.state.totalPrice,
-    //   customer: {
-    //     name: "Max coburn",
-    //     address: {
-    //       street: "test street 1",
-    //       zipCode: "12345",
-    //       country: "US",
-    //     },
-    //     email: "test@test.com",
-    //   },
-    //   deliveryMethod: "fastest",
-    // };
-    // axios
-    //   .post("/orders.json", order)
-    //   .then((response) => {
-    //     this.setState({ loading: false, purchasing: false });
-    //   })
-    //   .catch((error) => {
-    //     this.setState({ loading: false });
-    //   });
-    const queryParams = [];
-    for (let i in this.state.ingredients) {
-      queryParams.push(
-        encodeURIComponent(i) +
-          "=" +
-          encodeURIComponent(this.state.ingredients[i])
-      ); //encodes elements to be used in the url
-    }
-    queryParams.push("price=" + this.state.totalPrice);
-    const queryString = queryParams.join("&");
-    this.props.history.push({
-      pathname: "/checkout",
-      search: "?" + queryString,
-    });
+    this.props.history.push("./checkout");
+
+    // we don't need this block of code with Redux only the above line ^
+    // const queryParams = [];
+    // for (let i in this.state.ingredients) {
+    //   queryParams.push(
+    //     encodeURIComponent(i) +
+    //       "=" +
+    //       encodeURIComponent(this.state.ingredients[i])
+    //   ); //encodes elements to be used in the url
+    // }
+    // queryParams.push("price=" + this.state.totalPrice);
+    // const queryString = queryParams.join("&");
+    // this.props.history.push({
+    //   pathname: "/checkout",
+    //   search: "?" + queryString,
+    // });
   };
 
   render() {
