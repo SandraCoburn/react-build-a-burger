@@ -9,7 +9,9 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import reducer from "./store/reducer";
 
-const store = createStore(reducer);
+const devTools =
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+const store = createStore(reducer, devTools);
 
 ReactDOM.render(
   <React.StrictMode>
