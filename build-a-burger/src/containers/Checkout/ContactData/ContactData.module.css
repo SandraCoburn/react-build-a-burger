@@ -3,7 +3,8 @@
   width: 80%;
   text-align: center;
   box-shadow: 0 2px 3px #cccc;
-  border: 1px solide #eee;
+  border: 1px solid #eee;
+  padding: 10px;
   box-sizing: border-box;
 }
 
