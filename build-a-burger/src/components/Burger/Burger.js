@@ -1,6 +1,9 @@
 import React from "react";
+import { withRouter } from "react-router-dom"; //HOC that will pass router props to children components
+
 import classes from "./Burger.module.css";
 import BurgerIngredients from "./BurgerIngredients/BurgerIngredients";
+
 const Burger = (props) => {
   // we transfor the state object into an array
   let transformedIngredients = Object.keys(props.ingredients)
@@ -26,4 +29,4 @@ const Burger = (props) => {
     </div>
   );
 };
-export default Burger;
+export default withRouter(Burger);
