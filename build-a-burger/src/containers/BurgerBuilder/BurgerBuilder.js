@@ -14,7 +14,6 @@ import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 
 class BurgerBuilder extends Component {
   state = {
-    purchasable: false,
     purchasing: false,
     loading: false,
     error: false,
@@ -38,7 +37,8 @@ class BurgerBuilder extends Component {
       .reduce((sum, el) => {
         return sum + el;
       }, 0);
-    this.setState({ purchasable: sum > 0 });
+    // this.setState({ purchasable: sum > 0 }); //to get purchasable out of state we just return sum:
+    return sum > 0;
   }
 
   purchaseHandler = () => {
@@ -113,7 +113,7 @@ class BurgerBuilder extends Component {
             ingredientAdded={this.props.onIngredientAdded}
             ingredientRemoved={this.props.onIngredientRemove}
             disabled={disabledInfo}
-            purchasable={this.state.purchasable}
+            purchasable={this.updatePurchaseState(this.props.ings)} // we add the updatePurhaseState function and call it
             ordered={this.purchaseHandler}
             price={this.props.price}
           />
