@@ -1,4 +1,8 @@
 # react-build-a-burger
+
+
+Practice Redux
+
 ## App built using React Create App and CSS Modules for styling. Used axios to connect to Firebase Mongo database. Redux state management.
 ### Added Dynamic components
 ### Added Prop Type Validation
@@ -21,3 +25,4 @@
   - Organized file structure to have combined actions and combined reducers
   - Connected components to store with connect
   - Used mapStateToProps and mapDisapatchToProps
+
