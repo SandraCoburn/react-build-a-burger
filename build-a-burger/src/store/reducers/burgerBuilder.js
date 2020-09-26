@@ -28,7 +28,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         ingredients: {
           ...state.ingredients,
-          [action.ingredientName]: state.ingredients[action.ingredientName] + 1, //payload of this action will receive a new value in our copy of state
+          [action.ingredientName]: state.ingredients[action.ingredientName] - 1, //payload of this action will receive a new value in our copy of state
         },
         totalPrice: state.totalPrice - INGREDIENT_PRICES[action.ingredientName],
       };
