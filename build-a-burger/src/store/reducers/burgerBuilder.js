@@ -4,6 +4,7 @@ const initialState = {
   ingredients: null,
   totalPrice: 4,
   error: false,
+  building: false,
 };
 const INGREDIENT_PRICES = {
   salad: 0.5,
@@ -22,6 +23,7 @@ const reducer = (state = initialState, action) => {
           [action.ingredientName]: state.ingredients[action.ingredientName] + 1, //payload of this action will receive a new value in our copy
         },
         totalPrice: state.totalPrice + INGREDIENT_PRICES[action.ingredientName],
+        building: true,
       };
     case actionTypes.REMOVE_INGREDIENT:
       return {
@@ -31,6 +33,7 @@ const reducer = (state = initialState, action) => {
           [action.ingredientName]: state.ingredients[action.ingredientName] - 1, //payload of this action will receive a new value in our copy of state
         },
         totalPrice: state.totalPrice - INGREDIENT_PRICES[action.ingredientName],
+        building: true,
       };
     case actionTypes.SET_INGREDIENTS:
       return {
@@ -43,6 +46,7 @@ const reducer = (state = initialState, action) => {
         },
         totalPrice: 4,
         error: false,
+        building: false,
       };
     case actionTypes.FETCH_INGREDIENTS_FAILED:
       return {
