@@ -13,7 +13,7 @@ import * as actions from "../../store/actions/index";
 
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 
-class BurgerBuilder extends Component {
+export class BurgerBuilder extends Component {
   state = {
     purchasing: false,
   };
