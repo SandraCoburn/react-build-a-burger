@@ -65,3 +65,22 @@ Practice Redux
 
 - Install dependencies:
   - `npm install --save enzyme react-test-renderer enzyme-adapter-react-16`
+
+### Created secure routes and redirected user to checkout page.
+
+### Added persistent Auth State with local storage
+
+### To display user specific orders, Firebase rules need to be modified:
+
+```
+{
+  "rules":{
+    "ingredients": {
+      ".read": "true",
+    ".write": "true",
+    },
+    "orders": {".read":"auth != null", ".write": "auth != null", ".indexOn": ["userId"]}
+  }
+
+}
+```
