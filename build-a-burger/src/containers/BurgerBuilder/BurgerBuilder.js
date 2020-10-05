@@ -14,11 +14,12 @@ import * as actions from "../../store/actions/index";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
 
 export const BurgerBuilder = (props) => {
+  const { onInitIngredients } = props;
   const [purchasing, setPurchasing] = useState(false);
 
   useEffect(() => {
-    props.onInitIngredients();
-  }, []);
+    onInitIngredients();
+  }, [onInitIngredients]);
 
   const updatePurchaseState = (ingredients) => {
     const sum = Object.keys(ingredients)
